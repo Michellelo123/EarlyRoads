@@ -1,0 +1,65 @@
+@use "styles/variables" as *;
+
+.workFilter {
+    display: flex;
+    flex-direction: column;
+    // border: 3px solid black;
+    margin: 0.3rem 0.5rem;
+    padding: 0 1rem;
+    justify-content: space-evenly;
+    gap: 10px;
+    background-color: $color-primary;
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 1000px;
+    transition: max-height 0.5s ease;
+    button{
+        color: black;
+        border: 2px black solid;
+        display: flex;
+        flex-direction: column;
+
+    }
+    p{
+        color: $color-mint;
+        // padding-top: 0.4rem;
+    }
+    .employment{
+        padding-top: 0.5rem;
+    }
+}
+
+.close{
+    max-height: 0;
+    padding: 0 1rem;
+}
+
+.filterBtn{
+    color: $color-primary-dark;
+    background-color: $color-bg;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+}
+
+.list{
+    display: flex;
+    flex-wrap:wrap;
+    padding-bottom: 0.8rem;
+    // gap: 5px;
+    // border: 2px solid black;
+    label{
+        // border: 1px red solid;
+        margin-right: 10px;
+    }
+    input{
+        margin-right: 5px;
+        margin-top: 4px;
+        // padding-bottom: 1rem;
+        &[type='checkbox']{
+         
+            accent-color: $color-primary-dark;
+        }
+    }
+}

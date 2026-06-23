@@ -1,0 +1,76 @@
+@use "styles/variables" as *;
+
+footer{
+    background-color: $color-primary;
+    color: $color-bg;
+    padding: 0.3rem 1.5rem;
+    div{
+        margin-top: 0.8rem;
+        margin-bottom:0.5rem;
+        padding: 0.5rem 0;
+    }
+    h3{
+        margin-bottom: 0.6rem;
+        span{
+        color: $color-mint;
+    }
+    }   
+    p{
+        color: $color-mint;
+        font-size: 0.8rem;
+        // text-align: center;
+    }
+
+    h5{
+        font-weight: 700;
+        margin-bottom: 0.5rem;;
+    }
+    li{
+        color: $color-mint;
+        font-size: 0.8rem;
+        margin-bottom:0.3rem;
+    }
+    hr{
+        background-color:black;
+    }
+    .copyright{
+        color:$color-primary-light;
+        p{
+            margin: 0.3rem 0;
+        }
+    }
+
+
+    @media (min-width: $breakpoint-tablet){
+        .footer{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 7rem;
+            // flex-direction: column;
+        }
+        hr{
+            width: 88%;
+            margin:0 auto;
+        }
+        .copyright{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7rem;
+        }
+    }
+}
+.copyrightLink{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerLink{
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyrightSentence{
+    text-align: center;
+}
