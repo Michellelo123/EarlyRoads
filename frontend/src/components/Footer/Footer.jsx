@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "./Footer.module.scss"
 import { div } from 'motion/react-client'
+// import COnflict
 export default function Footer() {
   return (
     <footer >
