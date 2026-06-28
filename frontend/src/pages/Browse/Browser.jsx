@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet} from 'react-router-dom'
 import {useState} from "react"
 import Filter from '../../components/FilterJobSearch/Filter'
 import JobCard from '../../components/FilterJobSearch/JobCard'
@@ -23,7 +24,9 @@ export default function Browser() {
             </div>
         </div>
         <Filter/>
-        <JobCard/>
+        
+            <JobCard/>
+
     </section>
   )
 }
