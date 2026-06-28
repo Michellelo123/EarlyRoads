@@ -1,6 +1,9 @@
 @use "styles/variables" as *;
 
 footer{
+    // position: fixed;
+    width: 100vw;
+    // bottom: 0;
     background-color: $color-primary;
     color: $color-bg;
     padding: 0.3rem 1.5rem;

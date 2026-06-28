@@ -3,7 +3,8 @@
 .aboutBackground{
     background-color: $color-background;
     color: $color-bg;
-    padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 8vw, 7rem);
+    padding: clamp(2rem, 5vw, 4rem) ;
+    flex: 1;
     // width: 75%;
 
     .about{
@@ -101,6 +102,7 @@
         font-style: italic;
         font-size: clamp(0.85rem, 1vw + 0.3rem, 1rem);
         max-width: 1000px;
+        // align-self
         // justify-self: center;
     }
 
