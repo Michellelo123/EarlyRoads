@@ -4,7 +4,10 @@ import {useState} from "react"
 import Filter from '../../components/FilterJobSearch/Filter'
 import JobCard from '../../components/FilterJobSearch/JobCard'
 import styles from "./Browse.module.scss"
+import supabase from '../../config/supabaseClient'
+
 export default function Browser() {
+console.log('supavase',supabase.supabaseUrl)
     const [location, setLocation] = useState(null)
     const [jobSearch, setJobSearch] = useState(null)
  const submitSearch=(e)=>{

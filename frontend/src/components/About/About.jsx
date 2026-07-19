@@ -28,7 +28,7 @@ export default function About() {
   const mapAbout = aboutInfoCard.map((item) => {
     return (
       <div key={item.id} className={styles.card}>
-        <img src="" alt="img" />
+        <img src="#" alt="img" />
         <h4>{item.title}</h4>
         <p>{item.description}</p>
       </div>
@@ -37,7 +37,7 @@ export default function About() {
 
   return (
     <div className={styles.aboutBackground}>
-      <div classNames={styles.about}>
+      <div className={styles.about}>
         <h6>Why does EarlyRoads exist?</h6>
         <div className={styles.herodescrip}>
           <h2>
@@ -52,15 +52,16 @@ export default function About() {
             miss after scrolling through 500 listings
           </p>
         </div>
-
         <div className={styles.motivationCards}>{mapAbout}</div>
         <p className={styles.ourBelief}>
           "We believe every graduate deserves a fair shot. Companies grow when
           they invest in new talen - and students grow when someone gives them
           the opportunity to learn from mentors/seniors and can prove themselves
         </p>
-        {/* <a href="#">browse open roles</a> */}
+        
         </div>
-    </div>
+        </div>
+    // </div>
+    // </div>
   );
 }

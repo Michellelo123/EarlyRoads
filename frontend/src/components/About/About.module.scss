@@ -3,33 +3,32 @@
 .aboutBackground{
     background-color: $color-background;
     color: $color-bg;
-    padding: clamp(2rem, 5vw, 4rem) ;
+    padding: clamp(0.3rem, 5vw, 5rem);
     flex: 1;
     // width: 75%;
-
+// display: flex;
+    // margin: 0 auto;
     .about{
+   
         display: flex;
         justify-content: center;
         align-items: center;
-    //    margin: 0 auto;
-        flex-direction: row;
-        border: 2px solid white;
+        flex-direction: column;
         gap: 1rem;
-        // margin: 1.5rem auto;
-        // width: 70%;
+        margin: 1rem auto;
+        // width: 100%;
 
-        // @media (min-width: $breakpoint-tablet){
-        //     flex-direction: row;
-        // }
-        // >div{
-        //     display: flex;
-        //     flex-direction: column;
-        // }
+      
+        >div{
+            display: flex;
+            flex-direction: column;
+        }
         h6{
         background-color: $color-mint;
         color: $color-card;
         border: 1px solid $color-primary-light;
-        
+        align-self: flex-start;
+
         // display: inline-flex;
         padding: 0.3rem 0.6rem;
         border-radius: $radius-lg;
@@ -55,19 +54,20 @@
         line-height: 1.6;
         margin-bottom: 1rem;
         max-width: 700px;
+        // padding: 0.3rem 0;
     }
     }
     .motivationCards{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 20px;
-        width: 80%;
-        // justify-content: center;
+        width: 100%;
     }
     .herodescrip{
         display: flex;
-        flex-direction: row;
-        width: 80%;
+        flex-direction: column;
+        // width: 95%;
+        // border:solid 1px white;
     }
     .card{
         background-color: $color-card;
@@ -76,7 +76,7 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        // width: 100%;
 
         h4{
             font-size: clamp(0.95rem, 1vw + 0.3rem, 1.15rem);
@@ -95,7 +95,7 @@
     .ourBelief{
         background-color: $color-mint;
         color: black;
-        padding: 1rem 1.5rem;
+        padding: 1rem 2rem;
         border-radius: $radius-md;
         margin: 1.5rem 0;
         border-left: 4px solid $color-primary;
@@ -111,7 +111,19 @@
         background-color: $color-primary;
         border-radius: $radius-lg;
         margin-top: 1rem;
-        padding: 1rem;
+        // padding: 0.85rem;
         // display: inline-block;
+    }
+
+    .about{
+        @media (min-width: $breakpoint-tablet){
+            .herodescrip{
+                flex-direction: row;
+            }
+            .motivationCards{
+                flex-direction: row;
+                width: 85%;
+            }
+        }
     }
 }
