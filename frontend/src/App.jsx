@@ -10,9 +10,14 @@ function App() {
 
   return (
     <>
-      <Navbar/>
-      <Outlet />
-      <Footer/>
+     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Navbar />
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
+   
     </>
   )
 }
