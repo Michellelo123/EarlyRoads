@@ -1,15 +1,38 @@
 import React from 'react'
 import { Outlet} from 'react-router-dom'
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import Filter from '../../components/FilterJobSearch/Filter'
 import JobCard from '../../components/FilterJobSearch/JobCard'
 import styles from "./Browse.module.scss"
-import supabase from '../../config/supabaseClient'
+import {supabase} from '../../config/supabaseClient'
 
 export default function Browser() {
 console.log('supavase',supabase.supabaseUrl)
     const [location, setLocation] = useState(null)
     const [jobSearch, setJobSearch] = useState(null)
+    const [jobs, setJobs] = useState([])
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(null)
+    
+
+    useEffect(()=>{
+        // const result = await supabase.from('jobs').select('*')
+        async function fetchJobs(){
+            const {data, error} = await supabase
+            .from('jobs')
+            .select('*')
+            .order ('posted_date', {ascending: false})
+            console.log('data',data)
+            if (error) {
+            setError(error.message)
+        }else {
+            setJobs(data)
+        }
+        setLoading(false)
+        
+    }
+    fetchJobs()
+},[])
  const submitSearch=(e)=>{
     console.log(e.target.value)
  }
@@ -27,8 +50,9 @@ console.log('supavase',supabase.supabaseUrl)
             </div>
         </div>
         <Filter/>
-        
-            <JobCard/>
+            {loading && <p>Loading jobs...</p>}
+            {error && <p>Error: {error}</p>}
+            {!loading && !error && <JobCard jobs={jobs} />}
 
     </section>
   )
