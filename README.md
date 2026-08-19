@@ -68,15 +68,6 @@ src/
 
 ---
 
-## Roadmap
-
-- [ ] Supabase auth for employers
-- [ ] Job application tracking
-- [ ] Email alerts for new listings
-- [ ] Company profiles
-
----
-
 ## Author
 
 **Michelle Lo** — [@Michellelo123](https://github.com/Michellelo123)
